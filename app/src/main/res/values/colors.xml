@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimaryDark">#5f1854</color>
+    <color name="Morado">#5f1854</color>
+    <color name="RosaLeve">#FDE3f0</color>
+    <color name="RosaFuerte">#f6a9ce</color>
+    <color name="MoradoRaro">#9e3668</color>
+    <color name="claro">#691A40</color>
+
 </resources>

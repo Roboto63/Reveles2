@@ -139,13 +139,32 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
+            switch (position){
+                case 0:
+                    tab1 t1=new tab1();
+                    return t1;
+                case 1:
+                    tab2 t2=new tab2();
+                    return t2;
+                case 2:
+                    tab3 t3=new tab3();
+                    return t3;
+                case 3:
+                    tab4 t4=new tab4();
+                    return t4;
+                case 4:
+                    tab5 t5=new tab5();
+                    return t5;
+
+                default:
+                    return null;
+            }
         }
 
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 5;
         }
     }
 }
