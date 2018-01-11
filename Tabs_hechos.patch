@@ -1,0 +1,31 @@
+Index: app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/colors.xml	(date 1515637136000)
++++ app/src/main/res/values/colors.xml	(revision )
+@@ -6,6 +6,6 @@
+     <color name="RosaLeve">#FDE3f0</color>
+     <color name="RosaFuerte">#f6a9ce</color>
+     <color name="MoradoRaro">#9e3668</color>
+-    <color name="claro">#691A40</color>
++    <color name="claro">#691a40</color>
+ 
+ </resources>
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(date 1515637136000)
++++ app/src/main/res/layout/activity_main.xml	(revision )
+@@ -86,7 +86,7 @@
+         android:layout_height="wrap_content"
+         android:layout_gravity="end|bottom"
+         android:layout_margin="@dimen/fab_margin"
+-        android:background="@color/MoradoRaro"
++        android:background="@color/claro"
+         app:srcCompat="@android:drawable/ic_dialog_email" />
+ 
+ </android.support.design.widget.CoordinatorLayout>

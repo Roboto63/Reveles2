@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1077990790929",
+    "firebase_url": "https://ravelesbuild-1.firebaseio.com",
+    "project_id": "ravelesbuild-1",
+    "storage_bucket": "ravelesbuild-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077990790929:android:c4a3911718e0c03c",
+        "android_client_info": {
+          "package_name": "com.example.roberto.reveles"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1077990790929-c2k64771ins7vp0mkofqsgkd87v2kmkd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.roberto.reveles",
+            "certificate_hash": "8c4b73f69e45b1841379d2829179aae9e160eb66"
+          }
+        },
+        {
+          "client_id": "1077990790929-oecgn2l5ih68eedvumj56ag0suoc5s6c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEHdZLTFOroNSMWVNn_mlD7OJn-4zU3z0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1077990790929-oecgn2l5ih68eedvumj56ag0suoc5s6c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
