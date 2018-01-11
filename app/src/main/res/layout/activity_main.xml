@@ -42,34 +42,32 @@
                 android:id="@+id/tabItem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tab_text_1"
-                app:titleTextColor="#5F1854" />
+                android:icon="@mipmap/path8" />
 
             <android.support.design.widget.TabItem
                 android:id="@+id/tabItem2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tab_text_2"
-                app:titleTextColor="#5F1854" />
+                android:icon="@mipmap/path6" />
 
             <android.support.design.widget.TabItem
                 android:id="@+id/tabItem3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tab_text_3" />
+                android:icon="@mipmap/path7" />
 
             <android.support.design.widget.TabItem
                 android:id="@+id/tabItem4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tab 4 " />
+                android:icon="@mipmap/path5" />
 
 
             <android.support.design.widget.TabItem
                 android:id="@+id/tabItem5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tab 5" />
+                android:icon="@mipmap/path4" />
 
         </android.support.design.widget.TabLayout>
     </android.support.design.widget.AppBarLayout>
