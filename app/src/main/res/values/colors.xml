@@ -6,6 +6,9 @@
     <color name="RosaLeve">#FDE3f0</color>
     <color name="RosaFuerte">#f6a9ce</color>
     <color name="MoradoRaro">#9e3668</color>
-    <color name="claro">#691a40</color>
+    <color name="PrimaryDarck">#292B3D</color>
+    <color name="graylight">#fafafa</color>
+    <color name="startblue">#09c6df</color>
+    <color name="endblue">#0bcce6</color>
 
 </resources>
