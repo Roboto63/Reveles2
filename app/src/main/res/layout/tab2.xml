@@ -10,7 +10,7 @@
         android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/common_google_signin_btn_icon_dark_focused"
+        app:srcCompat="@mipmap/boton"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="54dp"
         tools:layout_editor_absoluteY="63dp" />
@@ -19,7 +19,7 @@
         android:id="@+id/imageButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/common_google_signin_btn_icon_dark_disabled"
+        app:srcCompat="@mipmap/boton"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="245dp"
         tools:layout_editor_absoluteY="79dp" />
@@ -28,7 +28,7 @@
         android:id="@+id/imageButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/common_plus_signin_btn_icon_dark_pressed"
+        app:srcCompat="@mipmap/boton"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="70dp"
         tools:layout_editor_absoluteY="198dp" />
