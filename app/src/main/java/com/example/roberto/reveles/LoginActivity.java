@@ -87,10 +87,14 @@ public class LoginActivity extends AppCompatActivity {
 
 
     }
-
-
     public void registrar(View view) {
         Intent intent2 =new Intent(LoginActivity.this, RegistroActivity.class);
         startActivity(intent2);
     }
+
+    public void entrar(View view) {
+        Intent intent2 = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(intent2);
+    }
 }
+
