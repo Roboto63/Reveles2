@@ -53,8 +53,8 @@ public class LoginActivity extends AppCompatActivity {
 
     private void goToMainActivity() {
 
-        Intent intabs = new Intent(LoginActivity.this, MainActivity.class);
-        startActivity(intabs);
+        Intent intab = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(intab);
     }
 
     @Override
