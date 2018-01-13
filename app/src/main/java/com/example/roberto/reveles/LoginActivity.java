@@ -41,6 +41,8 @@ public class LoginActivity extends AppCompatActivity {
                 if(user != null){
                     if(user.isEmailVerified()){
                         Toast.makeText(LoginActivity.this, "Correo no verificado", Toast.LENGTH_SHORT).show();
+                    }else{
+                        goToMainActivity();
                     }
                 }
 
@@ -50,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void goToMainActivity() {
-        goToMainActivity();
+
         Intent intent1 = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(intent1);
     }
