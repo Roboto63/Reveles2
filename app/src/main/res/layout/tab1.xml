@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary">
+    android:background="@color/blanco">
 
     <ImageView
         android:id="@+id/imageView"
@@ -19,8 +18,8 @@
         android:id="@+id/sesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="128dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginBottom="152dp"
+        android:layout_marginStart="228dp"
         android:onClick="ir"
         android:text="Loguin"
         app:layout_constraintBottom_toBottomOf="parent"
