@@ -13,10 +13,15 @@ import android.view.ViewGroup;
  */
 
 public class tab3 extends Fragment {
+
     @Nullable
     @Override
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View myview=inflater.inflate (R.layout.tab3, container,false);
         return myview;
+
+
+
     }
 }

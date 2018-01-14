@@ -14,11 +14,15 @@ import android.view.ViewGroup;
 
 
 public class tab1 extends Fragment {
+
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View myview=inflater.inflate (R.layout.tab1, container,false);
         return myview;
+
+
     }
 
 

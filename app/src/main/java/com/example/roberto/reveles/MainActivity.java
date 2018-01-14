@@ -66,14 +66,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnsesion =  (Button)findViewById(R.id.sesion);
-        btnsesion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent sesionusua = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(sesionusua);
-            }
-        });
 
     }
 
@@ -103,6 +95,17 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void ir(View view) {
+        btnsesion =  (Button)findViewById(R.id.sesion);
+        btnsesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sesionusua = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(sesionusua);
+            }
+        });
     }
 
     /**
