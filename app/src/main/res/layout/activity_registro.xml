@@ -4,21 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.roberto.reveles.RegistroActivity">
+    android:background="@mipmap/loguinopciondos"
+    tools:context="com.example.roberto.reveles.RegistroActivity"
+    tools:layout_editor_absoluteY="81dp">
 
     <EditText
         android:id="@+id/registrousername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="250dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="165dp"
         android:ems="10"
         android:hint="username"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColorHint="@color/common_google_signin_btn_text_dark_pressed"
+        android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,30 +26,23 @@
         android:id="@+id/registropassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="279dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginStart="40dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registrousername"
-        app:layout_constraintVertical_bias="0.0" />
+        android:textColorHint="@color/common_google_signin_btn_text_dark_pressed"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/registrousername"
+        app:layout_constraintTop_toBottomOf="@+id/registrousername" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="51dp"
         android:onClick="registrado"
         android:text="Registrar"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registropassword" />
 </android.support.constraint.ConstraintLayout>

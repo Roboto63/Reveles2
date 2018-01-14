@@ -1,15 +1,17 @@
 package com.example.roberto.reveles;
 
 
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 /**
  * Created by Roberto on 10/01/2018.
  */
+
 
 public class tab1 extends Fragment {
     @Nullable
@@ -18,4 +20,6 @@ public class tab1 extends Fragment {
         View myview=inflater.inflate (R.layout.tab1, container,false);
         return myview;
     }
+
+
 }
