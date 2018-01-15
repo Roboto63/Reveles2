@@ -64,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                Intent sesionusua = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(sesionusua);
             }
         });
 
@@ -99,7 +101,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ir(View view) {
-        btnsesion =  (Button)findViewById(R.id.sesion);
         btnsesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
