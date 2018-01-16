@@ -12,5 +12,7 @@
     <color name="endblue">#0bcce6</color>
     <color name="blanco">#ffffff</color>
     <color name="black_overlay">#66000000</color>
+    <color name="backgroundColor">#212121</color>
+    <color name="background_footer">#90000000</color>
 
 </resources>
