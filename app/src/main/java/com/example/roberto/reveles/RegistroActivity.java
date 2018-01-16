@@ -1,5 +1,6 @@
 package com.example.roberto.reveles;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -16,9 +17,11 @@ import com.google.firebase.auth.FirebaseUser;
 public class RegistroActivity extends AppCompatActivity {
     private EditText usernameEditText;
     private EditText passwordEditText;
+    private EditText usuariosEditText;
 
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
+    private ProgressDialog mprogress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +39,6 @@ public class RegistroActivity extends AppCompatActivity {
 
                 if(user != null){
                     Toast.makeText(RegistroActivity.this, "usuario creado", Toast.LENGTH_LONG).show();
-                }else{
-                    Toast.makeText(RegistroActivity.this, "usuario", Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -66,7 +67,8 @@ public class RegistroActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 if (!task.isSuccessful()){
-                    Toast.makeText(RegistroActivity.this, "Error de conexion", Toast.LENGTH_LONG).show();
+                    String user_id = firebaseAuth.getCurrentUser().getUid();
+                    Toast.makeText(RegistroActivity.this, user_id, Toast.LENGTH_SHORT).show();
 
                 }else{
                     FirebaseUser user = firebaseAuth.getCurrentUser();

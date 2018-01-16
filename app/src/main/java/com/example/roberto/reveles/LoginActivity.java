@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -20,7 +21,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText usernameEditText;
     private EditText passwordEditText;
-
+    Button apertura;
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
 
@@ -44,6 +45,8 @@ public class LoginActivity extends AppCompatActivity {
                 if(user != null){
                     if(user.isEmailVerified()){
                         Toast.makeText(LoginActivity.this, "Correo no verificado", Toast.LENGTH_SHORT).show();
+                    }else {
+                        Toast.makeText(LoginActivity.this, "Reveles" + firebaseAuth.getCurrentUser().getUid(), Toast.LENGTH_SHORT).show();
                     }
 
 
@@ -82,7 +85,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(!task.isSuccessful()){
-                    Toast.makeText(LoginActivity.this,"Error", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this,"¡ups datos mal puestos!", Toast.LENGTH_SHORT).show();
+
+                }else {
                     Intent intent2 = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent2);
                 }

@@ -16,7 +16,7 @@
         android:layout_marginTop="165dp"
         android:background="@mipmap/fondotexto"
         android:ems="10"
-        android:hint="username"
+        android:hint="Correo"
         android:inputType="textPersonName"
         android:textColorHint="@color/common_google_signin_btn_text_dark_pressed"
         android:textSize="25sp"
