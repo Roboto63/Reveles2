@@ -19,9 +19,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class Perfil extends AppCompatActivity {
 
-    Button btnsesion;
+    Button btnsesion1;
+
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -31,23 +32,22 @@ public class MainActivity extends AppCompatActivity {
      * {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
     private SectionsPagerAdapter mSectionsPagerAdapter;
+
     /**
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_perfil);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
@@ -64,11 +64,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                Intent sesionusua = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(sesionusua);
             }
         });
-
 
     }
 
@@ -76,10 +73,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_perfil, menu);
         return true;
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -89,32 +85,22 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.camera) {
-            return true;
-        }
-
-        if (id == R.id.buscar) {
+        if (id == R.id.action_settings) {
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    public void ir(View view) {
-        btnsesion.setOnClickListener(new View.OnClickListener() {
+    public void regresar(View view) {
+        btnsesion1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent sesionusua = new Intent(MainActivity.this, LoginActivity.class);
+                Intent sesionusua = new Intent(Perfil.this, MainActivity.class);
                 startActivity(sesionusua);
             }
         });
     }
-
-    public void mover(View view) {
-        Intent intent3 = new Intent(MainActivity.this, Perfil.class);
-        startActivity(intent3);
-    }
-
 
     /**
      * A placeholder fragment containing a simple view.
@@ -144,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_perfil, container, false);
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
@@ -165,33 +151,13 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            switch (position){
-                case 0:
-                    tab1 t1=new tab1();
-
-                    return t1;
-                case 1:
-                    tab2 t2=new tab2();
-                    return t2;
-                case 2:
-                    tab3 t3=new tab3();
-                    return t3;
-                case 3:
-                    tab4 t4=new tab4();
-                    return t4;
-                case 4:
-                    tab5 t5=new tab5();
-                    return t5;
-
-                default:
-                    return null;
-            }
+            return PlaceholderFragment.newInstance(position + 1);
         }
 
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 5;
+            return 3;
         }
     }
 }
