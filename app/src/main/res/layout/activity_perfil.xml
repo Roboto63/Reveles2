@@ -27,6 +27,7 @@
             app:title="Ana Galvan"
             app:titleTextColor="@color/colorPrimaryDark">
 
+
         </android.support.v7.widget.Toolbar>
 
         <android.support.design.widget.TabLayout
@@ -48,7 +49,7 @@
                 android:id="@+id/tabItem2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="evidencias" />
+                android:text="Experiencias" />
 
             <android.support.design.widget.TabItem
                 android:id="@+id/tabItem3"
@@ -57,6 +58,8 @@
                 android:text="guardado" />
 
         </android.support.design.widget.TabLayout>
+
+
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.view.ViewPager

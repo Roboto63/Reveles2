@@ -76,23 +76,9 @@
                         android:id="@+id/person_age93"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Xalapa-Enriquez, Veracruz"
+                        android:text="Configuracion"
                         android:textColor="@color/PrimaryDarck" />
 
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/blanco">
-
-                    <ImageView
-                        android:id="@+id/person_photo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:background="@mipmap/naturia" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -101,52 +87,83 @@
                     android:background="@color/blanco"
                     android:padding="16dp">
 
-                    <TextView
-                        android:id="@+id/person_age932"
+                    <ImageButton
+                        android:id="@+id/person_photo91"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="La naturaleza es simplemente bella."
-                        android:textColor="@color/PrimaryDarck" />
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:background="@mipmap/path5"
+                        android:onClick="mover" />
 
+                    <TextView
+                        android:id="@+id/person_name91"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/person_photo91"
+                        android:text="Notificaciones"
+                        android:textColor="@color/PrimaryDarck"
+                        android:textSize="20sp" />
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:layout_width="383dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="20dp"
-                    android:background="@color/blanco">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blanco"
+                    android:padding="16dp">
 
-                    <Button
-                        android:id="@+id/button10"
+                    <ImageButton
+                        android:id="@+id/person_photo92"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentStart="true"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
-                        android:layout_marginStart="10dp"
-                        android:background="@color/blanco"
-                        android:text="Compartir"
-                        android:textColor="@color/Morado" />
+                        android:layout_marginRight="16dp"
+                        android:background="@mipmap/ic_place"
+                        android:onClick="mover" />
 
-                    <Button
-                        android:id="@+id/button9"
+                    <TextView
+                        android:id="@+id/person_name92"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginStart="15dp"
-                        android:layout_toEndOf="@+id/button10"
-                        android:background="@color/blanco"
-                        android:text="Vender"
-                        android:textColor="@color/Morado" />
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_toEndOf="@+id/person_photo92"
+                        android:text="Rutas"
+                        android:textColor="@color/PrimaryDarck"
+                        android:textSize="20sp" />
 
-                    <Button
-                        android:id="@+id/button9644"
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentEnd="true"
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blanco"
+                    android:padding="16dp">
+
+                    <ImageButton
+                        android:id="@+id/person_photo93"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
-                        android:layout_marginEnd="14dp"
-                        android:background="@android:drawable/ic_menu_share"
-                        android:textColor="@color/Morado" />
+                        android:layout_marginRight="16dp"
+                        android:background="@mipmap/ic_pin_drop"
+                        android:onClick="mover" />
+
+                    <TextView
+                        android:id="@+id/person_name93"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/person_photo93"
+                        android:text="Iniciar Ruta"
+                        android:textColor="@color/PrimaryDarck"
+                        android:textSize="20sp" />
 
                 </RelativeLayout>
 
@@ -154,7 +171,113 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/blanco"
-                    android:padding="16dp"></RelativeLayout>
+                    android:padding="16dp">
+
+                    <ImageButton
+                        android:id="@+id/person_photo95"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:background="@mipmap/path7"
+                        android:onClick="mover" />
+
+                    <TextView
+                        android:id="@+id/person_name95"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/person_photo95"
+                        android:text="GPS"
+                        android:textColor="@color/PrimaryDarck"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blanco"
+                    android:padding="16dp">
+
+                    <ImageButton
+                        android:id="@+id/person_photo9567"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:background="@mipmap/path8"
+                        android:onClick="mover" />
+
+                    <TextView
+                        android:id="@+id/person_name9235"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/person_photo9567"
+                        android:text="Explorar"
+                        android:textColor="@color/PrimaryDarck"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blanco"
+                    android:padding="16dp">
+
+                    <ImageButton
+                        android:id="@+id/person_photo9545"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:background="@mipmap/ic_beenhere"
+                        android:onClick="mover" />
+
+                    <TextView
+                        android:id="@+id/person_name9545"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/person_photo9545"
+                        android:text="Lugares"
+                        android:textColor="@color/PrimaryDarck"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blanco"
+                    android:padding="16dp">
+
+                    <ImageButton
+                        android:id="@+id/person_photo953"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:background="@mipmap/ic_info"
+                        android:onClick="mover" />
+
+                    <TextView
+                        android:id="@+id/person_name9512"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/person_photo953"
+                        android:text="Bloquear"
+                        android:textColor="@color/PrimaryDarck"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
