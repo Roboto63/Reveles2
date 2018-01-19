@@ -3,5 +3,97 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blanco">
+
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="231dp"
+            android:background="@color/blanco">
+
+            <ImageView
+                android:id="@+id/person_photo12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/emo2" />
+
+            <TextView
+                android:id="@+id/person_age93223das12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="63dp"
+                android:layout_marginStart="10dp"
+                android:text="Naturaleza Viva"
+                android:textColor="@color/blanco"
+                android:textSize="24sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/blanco"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/person_age93212"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="La naturaleza es simplemente bella"
+                    android:textColor="@color/PrimaryDarck" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="391dp"
+            android:layout_height="47dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/blanco">
+
+            <Button
+                android:id="@+id/button102"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:background="@color/blanco"
+                android:text="Share"
+                android:textColor="@color/Morado" />
+
+            <Button
+                android:id="@+id/button912"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/button102"
+                android:background="@color/blanco"
+                android:text="Explore"
+                android:textColor="@color/Morado" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blanco"
+            android:padding="16dp"></RelativeLayout>
+    </LinearLayout>
+
 
 </android.support.constraint.ConstraintLayout>
