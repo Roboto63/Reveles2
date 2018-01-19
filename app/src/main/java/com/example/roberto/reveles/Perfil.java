@@ -69,6 +69,10 @@ public class Perfil extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -159,7 +163,7 @@ public class Perfil extends AppCompatActivity {
                     tabexpe p2 = new tabexpe();
                     return p2;
                 case 2:
-                    tabguardado p3 = new tabguardado();
+                    BlankFragment p3 = new BlankFragment();
                     return p3;
                 default:
                     return null;
