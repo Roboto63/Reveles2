@@ -19,7 +19,9 @@
                 android:id="@+id/iv_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/abc_btn_radio_material"></ImageView>
+                android:src="@drawable/abc_btn_radio_material">
+
+            </ImageView>
 
             <TextView
                 android:id="@+id/tv_text"
@@ -27,7 +29,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/iv_image"
-                android:gravity="center"></TextView>
+                android:gravity="center">
+
+            </TextView>
 
             <TextView
                 android:id="@+id/tv_blah"
@@ -36,7 +40,9 @@
                 android:layout_below="@+id/tv_text"
                 android:layout_toEndOf="@+id/iv_image"
                 android:layout_toRightOf="@+id/iv_image"
-                android:text="Another Recyclerview Fragment"></TextView>
+                android:text="Another Recyclerview Fragment">
+
+            </TextView>
 
         </RelativeLayout>
     </android.support.v7.widget.CardView>
