@@ -15,8 +15,9 @@ import android.view.ViewGroup;
 public class tabexpe extends Fragment {
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View myview = inflater.inflate(R.layout.tabexpe, container, false);
-        return myview;
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.tabexpe, container, false);
+
+        return view;
     }
 }
