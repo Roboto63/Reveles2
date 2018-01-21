@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1077990790929-23b4adk0lkdgr3a6scc8fpml04t43t4m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.roberto.reveles",
+            "certificate_hash": "2b5e7d14f99cc61661dd6d97af44bea1045d6204"
+          }
+        },
+        {
           "client_id": "1077990790929-c2k64771ins7vp0mkofqsgkd87v2kmkd.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

@@ -17,7 +17,7 @@
         android:layout_marginTop="16dp"
         android:background="@mipmap/fondotexto"
         android:ems="10"
-        android:hint="usuario"
+        android:hint="Correo"
         android:inputType="textPersonName"
         android:text=""
         android:textColor="@android:color/darker_gray"
@@ -25,16 +25,16 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.208"
+        app:layout_constraintHorizontal_bias="0.548"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.376" />
+        app:layout_constraintVertical_bias="0.47" />
 
     <EditText
         android:id="@+id/registropassword"
         android:layout_width="296dp"
         android:layout_height="38dp"
-        android:layout_marginBottom="280dp"
+        android:layout_marginBottom="236dp"
         android:layout_marginEnd="19dp"
         android:layout_marginStart="40dp"
         android:background="@mipmap/fondotexto"
@@ -45,7 +45,7 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.303"
+        app:layout_constraintHorizontal_bias="0.586"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button

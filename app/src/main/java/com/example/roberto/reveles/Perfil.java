@@ -1,7 +1,9 @@
 package com.example.roberto.reveles;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
@@ -19,7 +21,22 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 public class Perfil extends AppCompatActivity {
+
+    private FirebaseAuth.AuthStateListener authStateListener;
+    private FirebaseAuth firebaseAuth;
+    private ProgressDialog progressDialog;
+    private DatabaseReference iDatabase;
+    private TextView textName;
+    private Toolbar toolbar;
+
 
     Button btnsesion1;
 
@@ -39,11 +56,25 @@ public class Perfil extends AppCompatActivity {
     private ViewPager mViewPager;
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        firebaseAuth.addAuthStateListener(authStateListener);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (authStateListener != null)
+            firebaseAuth.removeAuthStateListener(authStateListener);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
+        textName = (TextView) findViewById(R.id.textName);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
@@ -66,6 +97,29 @@ public class Perfil extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        firebaseAuth = FirebaseAuth.getInstance();
+       authStateListener = new FirebaseAuth.AuthStateListener() {
+           @Override
+           public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+               if (firebaseAuth.getCurrentUser() != null) {
+                   iDatabase = FirebaseDatabase.getInstance().getReference().child("Usuarios");
+                   iDatabase.child(firebaseAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
+                   @Override
+                   public void onDataChange(DataSnapshot dataSnapshot) {
+                       textName.setText(dataSnapshot.child("NombreUsuario").getValue().toString());
+                   }
+
+                   @Override
+                   public void onCancelled(DatabaseError databaseError) {
+
+                   }
+               });
+             }else {
+                   startActivity(new Intent(Perfil.this, LoginActivity.class));
+                   finish();
+               }
+           }
+       };
 
     }
 

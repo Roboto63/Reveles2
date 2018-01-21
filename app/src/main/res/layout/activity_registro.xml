@@ -9,6 +9,21 @@
     tools:layout_editor_absoluteY="81dp">
 
     <EditText
+        android:id="@+id/nombreusuario"
+        android:layout_width="296dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="108dp"
+        android:background="@mipmap/fondotexto"
+        android:ems="10"
+        android:hint="Nombre Usuario"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/common_google_signin_btn_text_dark_pressed"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
         android:id="@+id/registrousername"
         android:layout_width="296dp"
         android:layout_height="37dp"
