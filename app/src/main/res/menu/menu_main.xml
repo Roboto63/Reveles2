@@ -15,4 +15,5 @@
         android:title="camera"
         app:showAsAction="always" />
 
+
 </menu>

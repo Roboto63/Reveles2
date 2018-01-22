@@ -30,16 +30,13 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Perfil extends AppCompatActivity {
 
+    Button btnsesion1;
     private FirebaseAuth.AuthStateListener authStateListener;
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
     private DatabaseReference iDatabase;
     private TextView textName;
     private Toolbar toolbar;
-
-
-    Button btnsesion1;
-
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
