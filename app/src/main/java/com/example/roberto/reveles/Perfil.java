@@ -71,7 +71,7 @@ public class Perfil extends AppCompatActivity {
         setContentView(R.layout.activity_perfil);
         textName = (TextView) findViewById(R.id.textName);
 
-        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
