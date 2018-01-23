@@ -4,6 +4,7 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:actionBarNavMode="@color/Morado"
     tools:context="com.example.roberto.reveles.Perfil$PlaceholderFragment">
 
     <TextView
