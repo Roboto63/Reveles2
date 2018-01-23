@@ -14,5 +14,5 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
         android:text="@string/large_text"
-        android:textColor="@color/MoradoRaro" />
+        android:textColor="@color/PrimaryDarck" />
 </android.support.v4.widget.NestedScrollView>
