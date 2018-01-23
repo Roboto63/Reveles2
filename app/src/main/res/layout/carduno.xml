@@ -28,11 +28,12 @@
                     android:layout_height="226dp"
                     android:background="@color/blanco">
 
-                    <ImageView
+                    <ImageButton
                         android:id="@+id/person_photo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@mipmap/emo1" />
+                        android:background="@mipmap/emo1"
+                        android:onClick="Desplegar" />
 
                     <TextView
                         android:id="@+id/tv_text"

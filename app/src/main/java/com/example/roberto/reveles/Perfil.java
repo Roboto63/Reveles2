@@ -157,6 +157,7 @@ public class Perfil extends AppCompatActivity {
         });
     }
 
+
     /**
      * A placeholder fragment containing a simple view.
      */

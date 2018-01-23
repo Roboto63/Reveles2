@@ -274,7 +274,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_toEndOf="@+id/person_photo953"
-                        android:text="Bloquear"
+                        android:text="Cerrar sesion"
                         android:textColor="@color/PrimaryDarck"
                         android:textSize="20sp" />
 

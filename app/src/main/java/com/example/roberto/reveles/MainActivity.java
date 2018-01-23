@@ -115,6 +115,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent3);
     }
 
+    public void Desplegar(View view) {
+        Intent intent2 = new Intent(MainActivity.this, LugarActivity.class);
+        startActivity(intent2);
+    }
+
+
 
     /**
      * A placeholder fragment containing a simple view.

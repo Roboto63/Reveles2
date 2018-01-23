@@ -80,7 +80,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_marginRight="16dp"
                         android:background="@mipmap/ac"
-                        android:onClick="mover" />
+                        android:onClick="pruba" />
 
                     <TextView
                         android:id="@+id/person_name9"
