@@ -54,7 +54,6 @@ public class RegistroActivity extends AppCompatActivity {
 
         firebaseAuth.addAuthStateListener(authStateListener);
     }
-
     @Override
     protected void onStop() {
         super.onStop();
@@ -62,7 +61,6 @@ public class RegistroActivity extends AppCompatActivity {
         if (authStateListener != null)
             firebaseAuth.removeAuthStateListener(authStateListener);
     }
-
     public void registrado(View view) {
         final String usuario = usuariosEditText.getText().toString();
         final String username = usernameEditText.getText().toString();

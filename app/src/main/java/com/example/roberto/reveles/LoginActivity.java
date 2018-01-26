@@ -54,6 +54,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(user != null){
                     Intent mantener = new Intent(LoginActivity.this,MainActivity.class);
                     startActivity(mantener);
+
                     finish();
 
                 }

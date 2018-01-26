@@ -29,7 +29,6 @@
             app:titleTextColor="@color/colorPrimaryDark">
 
         </android.support.v7.widget.Toolbar>
-
         <TextView
             android:id="@+id/textName"
             android:layout_width="135dp"
