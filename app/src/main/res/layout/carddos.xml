@@ -32,14 +32,15 @@
                     android:background="@color/blanco"
                     android:padding="10dp">
 
-                    <ImageView
+                    <ImageButton
                         android:id="@+id/iv_image"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginRight="10dp"
-                        android:background="@mipmap/face" />
+                        android:background="@mipmap/face"
+                        android:onClick="ShowPopup" />
 
                     <TextView
                         android:id="@+id/tv_text"
