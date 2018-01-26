@@ -39,14 +39,14 @@ RIGHT NOW"
         android:id="@+id/l2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="135dp"
-        android:orientation="vertical"
-        android:paddingStart="150dp">
+        android:orientation="vertical">
 
         <Button
 
             android:id="@+id/buttonsub"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/buttonstyle4"
