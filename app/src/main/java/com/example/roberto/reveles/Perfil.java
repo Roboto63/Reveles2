@@ -52,25 +52,13 @@ public class Perfil extends AppCompatActivity {
      */
     private ViewPager mViewPager;
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        firebaseAuth.addAuthStateListener(authStateListener);
-    }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        if (authStateListener != null)
-            firebaseAuth.removeAuthStateListener(authStateListener);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
         textName = (TextView) findViewById(R.id.textName);
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
@@ -92,6 +80,10 @@ public class Perfil extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                FirebaseAuth.getInstance().signOut();
+                Intent sd = new Intent(Perfil.this, LoginActivity.class);
+                startActivity(sd);
+                finish();
             }
         });
         firebaseAuth = FirebaseAuth.getInstance();
@@ -111,14 +103,18 @@ public class Perfil extends AppCompatActivity {
 
                    }
                });
-             }else {
-                   startActivity(new Intent(Perfil.this, LoginActivity.class));
-                   finish();
-               }
+             }
            }
        };
 
     }
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        firebaseAuth.addAuthStateListener(authStateListener);
+    }
+
 
     @Override
     public void onResume() {
@@ -153,6 +149,7 @@ public class Perfil extends AppCompatActivity {
             public void onClick(View v) {
                 Intent sesionusua = new Intent(Perfil.this, MainActivity.class);
                 startActivity(sesionusua);
+                finish();
             }
         });
     }

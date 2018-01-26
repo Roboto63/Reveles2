@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -23,7 +22,6 @@ public class RegistroActivity extends AppCompatActivity {
     private EditText passwordEditText;
     private EditText usuariosEditText;
     private DatabaseReference iDatabase;
-
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
     private ProgressDialog mprogress;
@@ -41,11 +39,12 @@ public class RegistroActivity extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
-
                 if(user != null){
                     Toast.makeText(RegistroActivity.this, "usuario creado", Toast.LENGTH_LONG).show();
+                    Intent reg = new Intent(RegistroActivity.this, MainActivity.class);
+                    startActivity(reg);
+                    finish();
                 }
-
             }
         };
     }
@@ -68,19 +67,11 @@ public class RegistroActivity extends AppCompatActivity {
         final String usuario = usuariosEditText.getText().toString();
         final String username = usernameEditText.getText().toString();
         final String password= passwordEditText.getText().toString();
-        if (!TextUtils.isEmpty(usuario) && !TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)) {
-            //mprogress.setMessage("llenar todas las casillas");
-            //mprogress.show();
-
+        if (!usuario.isEmpty() && !usuario.isEmpty() && !password.isEmpty()) {
             firebaseAuth.createUserWithEmailAndPassword(username, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
-
                     if (!task.isSuccessful()) {
-
-
-
-
                     }else {
                         firebaseAuth.signInWithEmailAndPassword(username,password);
                         DatabaseReference iDatabase = FirebaseDatabase.getInstance().getReference().child("Usuarios");
@@ -89,15 +80,13 @@ public class RegistroActivity extends AppCompatActivity {
                         currentUserDB.child("Correo").setValue(username);
                         currentUserDB.child("password").setValue(password);
                         String user_id = firebaseAuth.getCurrentUser().getUid();
-                        Intent intent2 = new Intent(RegistroActivity.this, LoginActivity.class);
-                        startActivity(intent2);
-                        FirebaseUser user = firebaseAuth.getCurrentUser();
-                        user.sendEmailVerification();
                     }
 
 
                 }
             });
+        }else{
+            Toast.makeText(RegistroActivity.this, "¡ups falta rellenar cadros!", Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -16,12 +16,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnsesion;
+
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -66,10 +65,9 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
                 Intent sesionusua = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(sesionusua);
+                finish();
             }
         });
-
-
     }
 
 
@@ -100,15 +98,6 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void ir(View view) {
-        btnsesion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent sesionusua = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(sesionusua);
-            }
-        });
-    }
 
     public void mover(View view) {
         Intent intent3 = new Intent(MainActivity.this, Perfil.class);
