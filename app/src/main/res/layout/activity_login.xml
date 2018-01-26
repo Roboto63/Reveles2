@@ -112,11 +112,11 @@
         android:id="@+id/textView2"
         android:layout_width="252dp"
         android:layout_height="85dp"
-        android:layout_marginBottom="452dp"
+        android:layout_marginBottom="84dp"
         android:text="Reveles"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:textSize="70sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/registrousername"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

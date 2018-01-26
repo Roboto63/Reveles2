@@ -22,12 +22,6 @@
                 android:orientation="vertical"
                 android:padding="10dp">
 
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/blanco">
-
-                </android.support.v7.widget.CardView>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -66,7 +60,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:layout_width="383dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:background="@color/blanco"
@@ -74,7 +68,7 @@
 
                     <TextView
                         android:id="@+id/person_age93"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Configuracion"
                         android:textColor="@color/PrimaryDarck" />
@@ -100,7 +94,7 @@
 
                     <TextView
                         android:id="@+id/person_name91"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_toEndOf="@+id/person_photo91"
@@ -127,7 +121,7 @@
 
                     <TextView
                         android:id="@+id/person_name92"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_centerVertical="true"
@@ -158,7 +152,7 @@
 
                     <TextView
                         android:id="@+id/person_name93"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_toEndOf="@+id/person_photo93"
@@ -186,7 +180,7 @@
 
                     <TextView
                         android:id="@+id/person_name95"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_toEndOf="@+id/person_photo95"
@@ -214,7 +208,7 @@
 
                     <TextView
                         android:id="@+id/person_name9235"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_toEndOf="@+id/person_photo9567"
@@ -242,7 +236,7 @@
 
                     <TextView
                         android:id="@+id/person_name9545"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_toEndOf="@+id/person_photo9545"
@@ -259,7 +253,7 @@
                     android:padding="16dp">
 
                     <ImageButton
-                        android:id="@+id/person_photo953"
+                        android:id="@+id/salir"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
@@ -270,10 +264,10 @@
 
                     <TextView
                         android:id="@+id/person_name9512"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_toEndOf="@+id/person_photo953"
+                        android:layout_toEndOf="@+id/salir"
                         android:text="Cerrar sesion"
                         android:textColor="@color/PrimaryDarck"
                         android:textSize="20sp" />
