@@ -1,7 +1,9 @@
 package com.example.roberto.reveles;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -23,5 +25,10 @@ public class WelcomeActivity extends AppCompatActivity {
         downtoup = AnimationUtils.loadAnimation(this, R.anim.downtoup);
         l1.setAnimation(uptodown);
         l2.setAnimation(downtoup);
+    }
+
+    public void Bienvenida(View view) {
+        Intent intent4 = new Intent(WelcomeActivity.this, InisioSesionActivity.class);
+        startActivity(intent4);
     }
 }

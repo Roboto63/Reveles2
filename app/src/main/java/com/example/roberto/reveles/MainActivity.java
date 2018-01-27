@@ -125,6 +125,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent3);
     }
 
+    public void Desplegar(View view) {
+        Intent intent4 = new Intent(MainActivity.this, LugarActivity.class);
+        startActivity(intent4);
+    }
+
 
 
 

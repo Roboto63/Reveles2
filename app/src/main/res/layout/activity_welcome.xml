@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
-            android:text="CLIENTS SUBSCRIBED
+            android:text="TURISTS SUBSCRIBED
 RIGHT NOW"
             android:textAlignment="center"
             android:textColor="@color/blanco"
@@ -50,6 +50,7 @@ RIGHT NOW"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/buttonstyle4"
+            android:onClick="Bienvenida"
             android:text="SUBSCRIBE NOW" />
     </LinearLayout>
 

@@ -24,7 +24,7 @@ public class PopActivity extends AppCompatActivity {
         Button btnFollow;
         myDialog.setContentView(R.layout.custompopup);
         txtclose = (TextView) myDialog.findViewById(R.id.txtclose);
-        txtclose.setText("M");
+        txtclose.setText("X");
         btnFollow = (Button) myDialog.findViewById(R.id.btnfollow);
         txtclose.setOnClickListener(new View.OnClickListener() {
             @Override
