@@ -22,10 +22,6 @@
             android:name=".Perfil"
             android:label="@string/title_activity_perfil"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity
-            android:name=".LugarActivity"
-            android:label="@string/title_activity_lugar"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".WelcomeActivity">
 
 
