@@ -38,6 +38,7 @@
 
     <include
         layout="@layout/content_lugar"
+        android:layout_width="@+id/toolbar_layout"
         android:layout_height="564dp"
         tools:layout_editor_absoluteY="183dp" />
 

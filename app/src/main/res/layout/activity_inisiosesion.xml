@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/blanco"
     android:orientation="vertical"
-    tools:context="com.example.roberto.reveles.LogActivity">
+    tools:context="com.example.roberto.reveles.InisioSesionActivity">
 
     <LinearLayout
         android:id="@+id/linearuno"
@@ -51,6 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="18dp"
                 android:background="@drawable/buttonstyle3"
+                android:onClick="registrar"
                 android:padding="15dp"
                 android:text="Registrate" />
         </LinearLayout>
@@ -64,6 +65,7 @@
         android:orientation="vertical">
 
         <EditText
+            android:id="@+id/registrousername"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -74,6 +76,7 @@
             android:textColorHint="@color/cardview_dark_background" />
 
         <EditText
+            android:id="@+id/registropassword"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -86,6 +89,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:background="@drawable/buttonstyle"
+            android:onClick="login"
             android:text="ENTER" />
 
         <LinearLayout
@@ -99,13 +103,15 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_margin="10dp"
-                android:background="@mipmap/face" />
+                android:background="@mipmap/face"
+                android:onClick="entrar" />
 
             <Button
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_margin="10dp"
-                android:background="@mipmap/goog" />
+                android:background="@mipmap/goog"
+                android:onClick="entrar" />
         </LinearLayout>
 
         <LinearLayout
