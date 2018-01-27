@@ -77,7 +77,7 @@ public class Perfil extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
                 FirebaseAuth.getInstance().signOut();
-                Intent sd = new Intent(Perfil.this, LoginActivity.class);
+                Intent sd = new Intent(Perfil.this, InisioSesionActivity.class);
                 startActivity(sd);
                 finish();
             }

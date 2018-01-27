@@ -69,8 +69,9 @@
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:text="USERNAME"
+            android:layout_marginTop="10dp"
+            android:hint="CORREO"
+            android:inputType="textPersonName"
             android:textColor="@color/cardview_dark_background"
             android:textColorHighlight="@color/cardview_dark_background"
             android:textColorHint="@color/cardview_dark_background" />
@@ -80,8 +81,12 @@
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="PASSWORD"
-            android:textColor="@color/cardview_dark_background" />
+            android:layout_marginTop="8dp"
+            android:hint="PASSWORD"
+            android:inputType="textPassword"
+            android:textColor="@color/cardview_dark_background"
+            android:textColorHighlight="@color/cardview_dark_background"
+            android:textColorHint="@color/cardview_dark_background" />
 
         <Button
             android:layout_width="wrap_content"

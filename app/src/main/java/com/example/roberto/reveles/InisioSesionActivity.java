@@ -52,7 +52,6 @@ public class InisioSesionActivity extends AppCompatActivity {
                 if (user != null) {
                     Intent mantener = new Intent(InisioSesionActivity.this, MainActivity.class);
                     startActivity(mantener);
-
                     finish();
 
                 }
