@@ -43,6 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="18dp"
                 android:background="@drawable/buttonstyle4"
+                android:onClick="mapa"
                 android:padding="15dp"
                 android:text="Lee mas" />
 

@@ -114,6 +114,11 @@ public class InisioSesionActivity extends AppCompatActivity {
         startActivity(en);
         finish();
     }
+
+    public void mapa(View view) {
+        Intent intent6 = new Intent(InisioSesionActivity.this, MapsActivity.class);
+        startActivity(intent6);
+    }
 }
 
 
