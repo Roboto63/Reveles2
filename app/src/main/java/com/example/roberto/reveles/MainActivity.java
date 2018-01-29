@@ -130,6 +130,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent4);
     }
 
+    public void mapa(View view) {
+        Intent intent6 = new Intent(MainActivity.this, MapsActivity.class);
+        startActivity(intent6);
+    }
 
 
 

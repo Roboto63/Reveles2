@@ -25,7 +25,6 @@
             android:background="#ffffff"
             app:layout_scrollFlags="scroll|enterAlways"
             app:title="Reveles"
-            app:titleMarginStart="144dp"
             app:titleTextColor="@color/colorPrimaryDark">
 
         </android.support.v7.widget.Toolbar>

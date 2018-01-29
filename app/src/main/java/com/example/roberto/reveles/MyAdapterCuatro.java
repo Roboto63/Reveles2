@@ -20,7 +20,7 @@ public class MyAdapterCuatro extends RecyclerView.Adapter<MyAdapterCuatro.MyView
 
     @Override
     public MyAdapterCuatro.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardcuatro, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardcinco, parent, false);
         MyViewHolder vh = new MyViewHolder(v);
         return vh;
     }

@@ -7,9 +7,26 @@
         android:id="@+id/rv_recycler_viewTres"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/graylight">
+        android:background="@color/graylight"
+        android:paddingTop="60dp">
 
     </android.support.v7.widget.RecyclerView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp">
+
+        <EditText
+            android:layout_width="302dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableRight="@drawable/ic_search_black_24dp"
+            android:hint="Buscar"
+            android:textColor="@color/Morado"
+            android:textColorHighlight="@color/Morado"
+            android:textColorHint="@color/Morado" />
+    </android.support.v7.widget.CardView>
 
 
 </RelativeLayout>
