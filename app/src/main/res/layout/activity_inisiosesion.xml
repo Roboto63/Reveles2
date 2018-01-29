@@ -144,6 +144,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:background="@color/cardview_shadow_end_color"
+                android:onClick="recuperar"
                 android:text="Has olvidado la contraseña?"
                 android:textColor="@color/colorPrimary" />
         </LinearLayout>

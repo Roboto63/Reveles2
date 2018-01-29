@@ -119,6 +119,11 @@ public class InisioSesionActivity extends AppCompatActivity {
         Intent intent6 = new Intent(InisioSesionActivity.this, MapsActivity.class);
         startActivity(intent6);
     }
+
+    public void recuperar(View view) {
+        Intent intent7 = new Intent(InisioSesionActivity.this, RecuperarContraActivity.class);
+        startActivity(intent7);
+    }
 }
 
 
