@@ -36,7 +36,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginRight="16dp"
-                        android:background="@mipmap/goog"
+                        android:background="@mipmap/perfil"
                         android:onClick="mover" />
 
                     <TextView

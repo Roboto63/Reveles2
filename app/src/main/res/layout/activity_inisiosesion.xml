@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/blanco"
     android:orientation="vertical"
+    android:theme="@style/AppTheme.NoActionBar"
     tools:context="com.example.roberto.reveles.InisioSesionActivity">
 
     <LinearLayout
@@ -35,7 +36,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-
             android:orientation="horizontal">
 
             <Button
@@ -45,7 +45,8 @@
                 android:background="@drawable/buttonstyle4"
                 android:onClick="mapa"
                 android:padding="15dp"
-                android:text="Lee mas" />
+                android:text="Lee mas"
+                android:textColor="@color/blanco" />
 
             <Button
                 android:layout_width="wrap_content"

@@ -38,7 +38,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginRight="10dp"
-                        android:background="@mipmap/face"
+                        android:background="@mipmap/perfil"
                         android:onClick="ShowPopup" />
 
                     <TextView

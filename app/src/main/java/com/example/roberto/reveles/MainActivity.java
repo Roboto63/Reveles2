@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void mover(View view) {
-        Intent intent3 = new Intent(MainActivity.this, Perfil.class);
+        Intent intent3 = new Intent(MainActivity.this, PerfilPublicoActivity.class);
         startActivity(intent3);
     }
 

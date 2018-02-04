@@ -1,6 +1,7 @@
 package com.example.roberto.reveles;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -34,5 +35,10 @@ public class PopActivity extends AppCompatActivity {
         });
         myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         myDialog.show();
+    }
+
+    public void mover(View view) {
+        Intent intent3 = new Intent(PopActivity.this, PerfilPublicoActivity.class);
+        startActivity(intent3);
     }
 }

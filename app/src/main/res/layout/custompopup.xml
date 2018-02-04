@@ -131,6 +131,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="25dp"
         android:background="@drawable/buttonstyle4"
+        android:onClick="mover"
         android:text="Follow Me"
         android:textColor="@color/blanco" />
 
