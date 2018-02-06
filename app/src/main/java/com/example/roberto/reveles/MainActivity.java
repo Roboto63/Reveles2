@@ -135,6 +135,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent6);
     }
 
+    public void município(View view) {
+        Intent intent7 = new Intent(MainActivity.this, MunicipioActivity.class);
+        startActivity(intent7);
+    }
 
 
     /**

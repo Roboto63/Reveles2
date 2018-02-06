@@ -58,6 +58,10 @@
         <activity
             android:name=".PerfilPublicoActivity"
             android:label="@string/title_activity_perfil_publico"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MunicipioActivity"
+            android:label="@string/title_activity_municipio"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

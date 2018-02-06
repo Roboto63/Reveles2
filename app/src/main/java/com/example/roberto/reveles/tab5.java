@@ -21,6 +21,9 @@ public class tab5 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View myview=inflater.inflate (R.layout.tab5, container,false);
         return myview;
+
+
     }
+
 
 }

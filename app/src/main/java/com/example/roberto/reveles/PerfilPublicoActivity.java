@@ -6,6 +6,11 @@ import android.support.v7.widget.Toolbar;
 
 public class PerfilPublicoActivity extends AppCompatActivity {
 
+
+    public PerfilPublicoActivity() {
+        // Required empty public constructor
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,4 +20,5 @@ public class PerfilPublicoActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("");
 
     }
+
 }

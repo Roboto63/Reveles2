@@ -59,7 +59,7 @@
                         android:layout_below="@+id/tv_text"
                         android:background="@color/blanco"
                         android:drawableLeft="@drawable/ic_place_black_24dp"
-                        android:onClick="mapa"
+                        android:onClick="município"
                         android:padding="10dp"
                         android:text="Teocelo, Veracruz"
                         android:textColor="@color/PrimaryDarck" />

@@ -3,7 +3,7 @@
     android:layout_width="350dp"
     android:layout_height="475dp"
     android:layout_gravity="center"
-    android:background="#151515"
+    android:background="@color/blanco"
     android:orientation="vertical"
     android:padding="5dp">
 
@@ -36,7 +36,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"
             android:text="Elina Grofild"
-            android:textColor="@color/blanco"
+            android:textColor="@color/black_overlay"
             android:textStyle="bold" />
 
         <TextView
@@ -45,7 +45,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"
             android:text="Montreal,Canada"
-            android:textColor="@color/blanco" />
+            android:textColor="@color/black_overlay" />
     </LinearLayout>
 
     <LinearLayout
