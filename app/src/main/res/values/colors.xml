@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimary4">#3f51b5</color>
     <color name="colorPrimaryDark">#5f1854</color>
     <color name="Morado">#5f1854</color>
     <color name="RosaLeve">#fde3f0</color>
@@ -22,5 +23,14 @@
     <color name="Purpu">#6A0888</color>
     <color name="Purp">#3104B4</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="Purples">#DF01D7</color>
+    <color name="Purpus">#6A0888</color>
+    <color name="Purps">#3104B4</color>
+    <color name="colorAccsent">#FF4081</color>
+    <color name="naranjatajin">#FF9800</color>
+    <color name="moradotajin">#9C27B0</color>
+    <color name="cyantajin">#00BCD4</color>
+    <color name="amarillotajin">#FFEB3B</color>
+
 
 </resources>
