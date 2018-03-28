@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -42,9 +43,9 @@ public class LoginActivity extends AppCompatActivity {
             //finish();
         //}
 
-        usernameEditText = ( EditText) findViewById(R.id.registrousername);
+        usernameEditText = (EditText) findViewById(R.id.edtCorreo);
 
-        passwordEditText   = ( EditText) findViewById(R.id.registropassword);
+        passwordEditText = (EditText) findViewById(R.id.edtContrasena);
 
         firebaseAuth = FirebaseAuth.getInstance();
         authStateListener = new FirebaseAuth.AuthStateListener() {
@@ -91,7 +92,7 @@ public class LoginActivity extends AppCompatActivity {
     public void login(View view) {
         String username = usernameEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
-        if (!username.isEmpty() && !password.isEmpty()) {
+        if (!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)) {
             firebaseAuth.signInWithEmailAndPassword(username, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {

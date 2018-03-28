@@ -46,7 +46,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registrousername"
+        app:layout_constraintTop_toBottomOf="@+id/edtCorreo"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
@@ -131,7 +131,7 @@
         android:textColor="@color/Morado"
         android:textSize="70sp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/registrousername"
+        app:layout_constraintBottom_toTopOf="@+id/edtCorreo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -152,7 +152,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registropassword"
+        app:layout_constraintTop_toBottomOf="@+id/edtContrasena"
         tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>

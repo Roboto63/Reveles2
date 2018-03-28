@@ -9,15 +9,20 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class WelcomeActivity extends AppCompatActivity {
     LinearLayout l1, l2;
     Button btnsub;
     Animation uptodown, downtoup;
+    public static final String TAG = "WelcomeActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+
         btnsub = (Button) findViewById(R.id.buttonsub);
         l1 = (LinearLayout) findViewById(R.id.l1);
         l2 = (LinearLayout) findViewById(R.id.l2);
@@ -28,7 +33,16 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     public void Bienvenida(View view) {
-        Intent intent4 = new Intent(WelcomeActivity.this, InisioSesionActivity.class);
-        startActivity(intent4);
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (currentUser == null) {
+            Intent intent = new Intent(WelcomeActivity.this, InisioSesionActivity.class);
+            startActivity(intent);
+            finish();
+        } else {
+            Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
+            startActivity(intent);
+        }
     }
+
+
 }
