@@ -57,7 +57,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/tv_text"
                         android:layout_toRightOf="@+id/iv_image"
-                        android:text="lolitapop130"
+                        android:text="Andrea Galvan"
                         android:textColor="@color/PrimaryDarck" />
 
                 </RelativeLayout>

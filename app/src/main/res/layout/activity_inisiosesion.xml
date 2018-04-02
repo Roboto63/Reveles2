@@ -49,11 +49,11 @@
                 android:textColor="@color/blanco" />
 
             <Button
-                android:id="@+id/btnRegistro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="18dp"
                 android:background="@drawable/buttonstyle3"
+                android:onClick="registrar"
                 android:padding="15dp"
                 android:text="Registrate" />
         </LinearLayout>
@@ -67,7 +67,7 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/edtEmail"
+            android:id="@+id/registrousername"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -85,7 +85,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/edtPassword"
+                android:id="@+id/registropassword"
                 android:layout_width="302dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -105,12 +105,12 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btnLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:background="@drawable/buttonstyle"
+            android:onClick="login"
             android:text="ENTER" />
 
         <LinearLayout
@@ -124,13 +124,15 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_margin="10dp"
-                android:background="@mipmap/face" />
+                android:background="@mipmap/face"
+                android:onClick="entrar" />
 
-            <com.google.android.gms.common.SignInButton
-                android:id="@+id/googleSignin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp" />
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@mipmap/goog"
+                android:onClick="entrar" />
         </LinearLayout>
 
         <LinearLayout
