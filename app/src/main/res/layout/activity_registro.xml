@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,6 +8,20 @@
     android:background="@mipmap/loguinopciondos"
     tools:context="com.example.roberto.reveles.RegistroActivity"
     tools:layout_editor_absoluteY="81dp">
+
+    <ImageButton
+        android:id="@+id/iBtnRegistro"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="38dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistroR"
+        app:srcCompat="@color/cardview_light_background" />
 
     <EditText
         android:id="@+id/edtNombreR"

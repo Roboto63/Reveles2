@@ -25,6 +25,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class InisioSesionActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
 
@@ -125,6 +126,16 @@ public class InisioSesionActivity extends AppCompatActivity implements GoogleApi
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         Toast.makeText(InisioSesionActivity.this, "Google Authentication Success", Toast.LENGTH_LONG).show();
+                        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+                        String name = user.getDisplayName();
+                        String email = user.getEmail();
+                        String user_id = firebaseAuth.getCurrentUser().getUid();
+                        DatabaseReference iDatabase = FirebaseDatabase.getInstance().getReference().child("Usuarios");
+                        DatabaseReference currentUserDB = iDatabase.child(user_id);
+                        currentUserDB.child("Correo").setValue(email);
+                        currentUserDB.child("NombreUsuario").setValue(name);
+
                         entrarMain();
                     } else {
                         Toast.makeText(InisioSesionActivity.this, "Google Authentication  Unsuccess", Toast.LENGTH_LONG).show();
