@@ -22,7 +22,6 @@ import com.google.android.gms.maps.model.PolylineOptions;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import Directions.DirectionFinder;
 import Directions.DirectionFinderListener;
@@ -95,6 +94,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public boolean onMarkerClick(Marker marker) {
                 if (marker.equals(originMarkers.get(0))){
+                    Toast.makeText(
+                            MapsActivity.this,
+                            "Marcador pulsado:\n" +
+                                    marker.getTitle(),
+                            Toast.LENGTH_SHORT).show();
+                }
+
+                if (marker.equals(destinationMarkers.get(0))) {
                     Toast.makeText(
                             MapsActivity.this,
                             "Marcador pulsado:\n" +
