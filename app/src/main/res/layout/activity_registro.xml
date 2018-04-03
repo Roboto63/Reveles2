@@ -13,7 +13,7 @@
         android:layout_width="296dp"
         android:layout_height="37dp"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="244dp"
         android:background="@mipmap/fondotexto"
         android:ems="10"
         android:hint="Nombre Usuario"
@@ -27,8 +27,8 @@
         android:id="@+id/edtCorreoR"
         android:layout_width="296dp"
         android:layout_height="37dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="165dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="316dp"
         android:background="@mipmap/fondotexto"
         android:ems="10"
         android:hint="Correo"
@@ -42,7 +42,7 @@
         android:id="@+id/edtContrasenaR"
         android:layout_width="296dp"
         android:layout_height="38dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="36dp"
         android:background="@mipmap/fondotexto"
         android:ems="10"
         android:hint="Password"
@@ -61,5 +61,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtContrasenaR" />
+
+    <ImageButton
+        android:id="@+id/iregister"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="48dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="96dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/edtNombreR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_report_image" />
 
 </android.support.constraint.ConstraintLayout>

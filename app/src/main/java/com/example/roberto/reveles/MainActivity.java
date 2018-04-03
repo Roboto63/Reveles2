@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                Intent sesionusua1 = new Intent(MainActivity.this, InisioSesionActivity.class);
+                Intent sesionusua1 = new Intent(MainActivity.this, PostActivity.class);
                 startActivity(sesionusua1);
                 finish();
             }
