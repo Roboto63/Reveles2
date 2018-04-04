@@ -27,9 +27,10 @@ public class PostActivity extends AppCompatActivity {
     private ImageView ivpost;
     private FirebaseAuth firebaseAuth;
     private ProgressDialog regProgress;
-    private DatabaseReference databaseReference;
+    private DatabaseReference databaseReference, imdatabase;
     private StorageReference storageReference;
     Uri imageUri;
+
 
     private static  final int Image_request = 1;
 

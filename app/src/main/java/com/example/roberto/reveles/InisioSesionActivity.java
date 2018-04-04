@@ -92,8 +92,8 @@ public class InisioSesionActivity extends AppCompatActivity implements GoogleApi
 
     private void Login() {
 
-        String email = LoginEmailText.getText().toString();
-        String password = LoginPasswordText.getText().toString();
+        String email = LoginEmailText.getText().toString().trim();
+        String password = LoginPasswordText.getText().toString().trim();
 
         if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
 
