@@ -6,7 +6,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:fillViewport="false">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -259,8 +260,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginRight="16dp"
-                        android:background="@mipmap/ic_info"
-                        android:onClick="mover" />
+                        android:background="@mipmap/ic_info" />
 
                     <TextView
                         android:id="@+id/person_name9512"

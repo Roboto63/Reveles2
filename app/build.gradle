@@ -28,6 +28,10 @@ dependencies {
     //noinspection GradleCompatible
     implementation 'com.google.firebase:firebase-database:9.2.0'
     implementation 'com.google.firebase:firebase-auth:9.2.0'
+    compile 'com.google.firebase:firebase-storage:9.2.0'
+    compile 'com.theartofdev.edmodo:android-image-cropper:2.4.+'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    //implementation'com.firebaseui:firebase-ui-database:2.0.0'
     implementation 'com.android.support:support-v4:26.1.0'
     implementation 'com.google.android.gms:play-services-maps:9.2.0'
     testImplementation 'junit:junit:4.12'
@@ -37,5 +41,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation 'com.android.support:cardview-v7:26.1.0'
     compile 'com.google.android.gms:play-services-ads:9.2.0'
+    compile 'com.google.firebase:firebase-auth:9.2.0'
+    compile 'com.google.android.gms:play-services-auth:9.2.0'
 }
 apply plugin: 'com.google.gms.google-services'
