@@ -34,19 +34,20 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:27.1.0'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation 'com.android.support:cardview-v7:27.1.0'
-    implementation 'com.google.android.gms:play-services-ads:12.0.0'
+    implementation 'com.google.android.gms:play-services-ads:12.0.1'
 
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.6.0'
 
     //Firebase
-    implementation 'com.google.firebase:firebase-auth:12.0.0'
-    implementation 'com.google.firebase:firebase-storage:12.0.0'
-    implementation 'com.google.firebase:firebase-core:12.0.0'
-    implementation 'com.google.firebase:firebase-database:12.0.0'
+    implementation 'com.google.firebase:firebase-auth:12.0.1'
+    implementation 'com.google.firebase:firebase-storage:12.0.1'
+    implementation 'com.google.firebase:firebase-core:12.0.1'
+    implementation 'com.google.firebase:firebase-database:12.0.1'
 
     //Google Account Login
-    implementation 'com.google.android.gms:play-services-auth:12.0.0'
+    implementation 'com.google.android.gms:play-services-auth:12.0.1'
     //Google Maps
-    implementation 'com.google.android.gms:play-services-maps:12.0.0'
+    implementation 'com.google.android.gms:play-services-maps:12.0.1'
+    implementation 'com.google.android.gms:play-services-location:12.0.1'
 }
 apply plugin: 'com.google.gms.google-services'

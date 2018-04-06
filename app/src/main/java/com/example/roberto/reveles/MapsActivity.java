@@ -1,13 +1,22 @@
 package com.example.roberto.reveles;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.location.Location;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Looper;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.widget.Toast;
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -35,6 +44,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private List<Polyline> polylinePaths = new ArrayList<>();
     private ProgressDialog progressDialog;
 
+    //nearby places
+    private double latitude;
+    private double longitude;
+    private Marker mMarker;
+    private Location mLastLocation;
+    private FusedLocationProviderClient fusedLocationProviderClient;
+    private LocationRequest locationRequest;
+    private LocationCallback locationCallback;
+    ///
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +62,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        //nearby places
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            checkLocationPermission();
+            buildLocationRequest();
+            buildLocationCallBack();
+
+            fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+            fusedLocationProviderClient.requestLocationUpdates(locationRequest, locationCallback, Looper.myLooper());
+        }
+        ////
+
         sendRequest();
 
 /*        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
@@ -61,12 +92,36 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });*/
     }
 
+    private void buildLocationCallBack() {
+        locationCallback = new LocationCallback() {
+
+            @Override
+            public void onLocationResult(LocationResult p0) {
+
+                mLastLocation = p0.getLastLocation();
+                if (mMarker != null) {
+                    mMarker.remove();
+                }
+
+                latitude = mLastLocation.getLatitude();
+
+            }
+        };
+    }
+
+
+    private void buildLocationRequest() {
+    }
+
+    private void checkLocationPermission() {
+    }
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         LatLng teocelo = new LatLng(19.384890, -96.971904);
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(teocelo,50));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(teocelo, 50));
 
        /* originMarkers.add(mMap.addMarker(new MarkerOptions()
                 .position(teocelo)
@@ -93,12 +148,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
-                if (marker.equals(originMarkers.get(0))){
+                if (marker.equals(originMarkers.get(0))) {
                     Toast.makeText(
                             MapsActivity.this,
                             "Marcador pulsado:\n" +
                                     marker.getTitle(),
                             Toast.LENGTH_SHORT).show();
+                    placeInfo();
                 }
 
                 if (marker.equals(destinationMarkers.get(0))) {
@@ -107,6 +163,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             "Marcador pulsado:\n" +
                                     marker.getTitle(),
                             Toast.LENGTH_SHORT).show();
+                    placeInfo();
                 }
 
                 return false;
@@ -117,7 +174,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private void sendRequest() {
         String origin = "19.390052,-96.979869";
         String destination = "19.388686,-96.977763";
-              try {
+        try {
             new DirectionFinder(this, origin, destination).execute();
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -142,7 +199,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
         if (polylinePaths != null) {
-            for (Polyline polyline:polylinePaths ) {
+            for (Polyline polyline : polylinePaths) {
                 polyline.remove();
             }
         }
@@ -177,5 +234,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             polylinePaths.add(mMap.addPolyline(polylineOptions));
         }
+    }
+
+    public void placeInfo() {
+        Intent i = new Intent(MapsActivity.this, LugarActivity.class);
+        startActivity(i);
+        finish();
+    }
+
+    private String getPhotoPlace(String photo_reference, int maxWidth) {
+        StringBuilder url = new StringBuilder("https://maps.googleapis.com/maps/api/place/photo");
+        url.append("?maxwidth=" + maxWidth);
+        url.append("&photoreference=" + photo_reference);
+        url.append("&key=AIzaSyCinE0jhv2MO0u1xwvFqaVjH9XqCRepGsY");
+
+        return url.toString();
     }
 }
