@@ -4,19 +4,11 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.location.Location;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Looper;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.widget.Toast;
 
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationCallback;
-import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationResult;
-import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -44,15 +36,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private List<Polyline> polylinePaths = new ArrayList<>();
     private ProgressDialog progressDialog;
 
-    //nearby places
-    private double latitude;
-    private double longitude;
-    private Marker mMarker;
-    private Location mLastLocation;
-    private FusedLocationProviderClient fusedLocationProviderClient;
-    private LocationRequest locationRequest;
-    private LocationCallback locationCallback;
-    ///
+    private List<Marker> markers = new ArrayList<>();
+    private List<LatLng> latLngs = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,72 +48,54 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        //nearby places
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            checkLocationPermission();
-            buildLocationRequest();
-            buildLocationCallBack();
+        //sendRequest();
 
-            fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-            fusedLocationProviderClient.requestLocationUpdates(locationRequest, locationCallback, Looper.myLooper());
-        }
-        ////
-
-        sendRequest();
-
-/*        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
-            @Override
-            public boolean onMarkerClick(Marker marker) {
-                if (marker.equals(originMarkers)){
-                    Toast.makeText(
-                            MapsActivity.this,
-                            "Marcador pulsado:\n" +
-                                    marker.getTitle(),
-                            Toast.LENGTH_SHORT).show();
-                }
-
-                return false;
-            }
-        });*/
-    }
-
-    private void buildLocationCallBack() {
-        locationCallback = new LocationCallback() {
-
-            @Override
-            public void onLocationResult(LocationResult p0) {
-
-                mLastLocation = p0.getLastLocation();
-                if (mMarker != null) {
-                    mMarker.remove();
-                }
-
-                latitude = mLastLocation.getLatitude();
-
-            }
-        };
-    }
-
-
-    private void buildLocationRequest() {
-    }
-
-    private void checkLocationPermission() {
     }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        LatLng teocelo = new LatLng(19.384890, -96.971904);
+        LatLng iglesiaAsunsion = new LatLng(19.385917, -96.972556);
+        LatLng parqueRevolucion = new LatLng(19.385972, -96.972917);
+        LatLng hotelReal = new LatLng(19.386306, -96.976694);
+        LatLng rinconcito = new LatLng(19.393972, -96.979667);
+        LatLng cascadaTexolo = new LatLng(19.393648, -96.979141);
+        LatLng museoComunitario = new LatLng(19.387250, -96.978833);
+        LatLng cafebeneficio = new LatLng(19.384381, -96.972623);
+        LatLng plazaArtesanias = new LatLng(19.386222, -96.972556);
+        LatLng nevado = new LatLng(19.385194, -96.973250);
+        LatLng acuatica = new LatLng(19.383917, -96.973583);
+        LatLng amorescafe = new LatLng(19.383917, -96.973583);
+        LatLng yotecielo = new LatLng(19.382528, -96.976694);
+        LatLng diostigre = new LatLng(19.386250, -96.971167);
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(teocelo, 50));
+        String[] titulos = {"Iglesia de la Asunción", "Parque Revolución", "Hotel Real Teocelo",
+                "El Rinconcito", "Mirador Cascada de Texolo", "Museo Comunitario \"Antigua Estación Ferroviaria\"",
+                "Cafe \"El Beneficio\"", "Plaza de artesanias", "El nevado", "Acuatica \"Los Delfines\"",
+                "Cafeteria \"Amorescafe\"", "Cafeteria \"Yo te cielo\"", "Hotel Dios Tigre"};
 
-       /* originMarkers.add(mMap.addMarker(new MarkerOptions()
-                .position(teocelo)
-                .title("Marcador a Teocelo")))
-                .setIcon(BitmapDescriptorFactory.fromResource(R.mipmap.start_blue));*/
+        latLngs.add(iglesiaAsunsion);
+        latLngs.add(parqueRevolucion);
+        latLngs.add(hotelReal);
+        latLngs.add(rinconcito);
+        latLngs.add(cascadaTexolo);
+        latLngs.add(museoComunitario);
+        latLngs.add(cafebeneficio);
+        latLngs.add(plazaArtesanias);
+        latLngs.add(nevado);
+        latLngs.add(acuatica);
+        latLngs.add(amorescafe);
+        latLngs.add(yotecielo);
+        latLngs.add(diostigre);
 
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLngs.get(0), 20));
 
+        for (int i = 0; i < latLngs.size(); i++) {
+            markers.add(mMap.addMarker(new MarkerOptions()
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+                    .title(titulos[i])
+                    .position(latLngs.get(i))));
+        }
         /*mMap.addPolyline(new PolylineOptions().add(
            finca,
            new LatLng(19.390052, -96.979869),
@@ -138,17 +105,30 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         );
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(finca));*/
+
+
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
             return;
         }
         mMap.setMyLocationEnabled(true);
-        mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
-                if (marker.equals(originMarkers.get(0))) {
+                for (int i = 0; i < markers.size(); i++) {
+                    if (marker.equals(markers.get(i))) {
+                        Toast.makeText(
+                                MapsActivity.this,
+                                "Marcador pulsado:\n" +
+                                        marker.getTitle(),
+                                Toast.LENGTH_SHORT).show();
+                        placeInfo();
+                    }
+                }
+
+                /*if (marker.equals(originMarkers.get(0))) {
                     Toast.makeText(
                             MapsActivity.this,
                             "Marcador pulsado:\n" +
@@ -164,9 +144,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                     marker.getTitle(),
                             Toast.LENGTH_SHORT).show();
                     placeInfo();
-                }
+                }*/
 
-                return false;
+                return true;
             }
         });
     }
