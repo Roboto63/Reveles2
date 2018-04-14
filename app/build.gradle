@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.roberto.reveles"
         minSdkVersion 19
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -22,26 +22,33 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:appcompat-v7:27.1.0'
+    implementation 'com.android.support:design:27.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     //noinspection GradleCompatible
-    implementation 'com.google.firebase:firebase-database:9.2.0'
-    implementation 'com.google.firebase:firebase-auth:9.2.0'
-    compile 'com.google.firebase:firebase-storage:9.2.0'
-    compile 'com.theartofdev.edmodo:android-image-cropper:2.4.+'
-    implementation 'com.squareup.picasso:picasso:2.5.2'
-    //implementation'com.firebaseui:firebase-ui-database:2.0.0'
-    implementation 'com.android.support:support-v4:26.1.0'
-    implementation 'com.google.android.gms:play-services-maps:9.2.0'
+    implementation 'com.android.support:support-v4:27.1.0'
+
     testImplementation 'junit:junit:4.12'
-    compile 'com.google.firebase:firebase-core:9.2.0'
+
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    compile 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:27.1.0'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    implementation 'com.android.support:cardview-v7:26.1.0'
-    compile 'com.google.android.gms:play-services-ads:9.2.0'
-    compile 'com.google.firebase:firebase-auth:9.2.0'
-    compile 'com.google.android.gms:play-services-auth:9.2.0'
+    implementation 'com.android.support:cardview-v7:27.1.0'
+    implementation 'com.google.android.gms:play-services-ads:11.0.2'
+
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.4.+'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    //Firebase
+    implementation 'com.google.firebase:firebase-auth:11.0.2'
+    implementation 'com.google.firebase:firebase-storage:11.0.2'
+    implementation 'com.google.firebase:firebase-core:11.0.2'
+    implementation 'com.google.firebase:firebase-database:11.0.2'
+    implementation 'com.firebaseui:firebase-ui-database:2.1.1'
+
+    //Google Account Login
+    implementation 'com.google.android.gms:play-services-auth:11.0.2'
+    //Google Maps
+    implementation 'com.google.android.gms:play-services-maps:11.0.2'
 }
 apply plugin: 'com.google.gms.google-services'

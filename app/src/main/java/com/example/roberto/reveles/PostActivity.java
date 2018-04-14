@@ -14,8 +14,12 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -29,9 +33,8 @@ public class PostActivity extends AppCompatActivity {
     private ProgressDialog regProgress;
     private DatabaseReference databaseReference, imdatabase;
     private StorageReference storageReference;
+    FirebaseUser firebaseUser;
     Uri imageUri;
-
-
     private static  final int Image_request = 1;
 
     @Override
@@ -42,6 +45,8 @@ public class PostActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Postimages");
         storageReference  = FirebaseStorage.getInstance().getReference();
+        imdatabase = FirebaseDatabase.getInstance().getReference().child("Usuarios").child(firebaseUser.getUid());
+        firebaseUser = firebaseAuth.getCurrentUser();
 //elementos a usar para el post
         edititle = (EditText)findViewById(R.id.edititle);
         edipost = (EditText)findViewById(R.id.edipost);
@@ -91,26 +96,29 @@ public class PostActivity extends AppCompatActivity {
             filepath.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(final UploadTask.TaskSnapshot taskSnapshot) {
+imdatabase.addValueEventListener(new ValueEventListener() {
+    @Override
+    public void onDataChange(DataSnapshot dataSnapshot) {
+        String downloadUri = taskSnapshot.getDownloadUrl().toString();
+        DatabaseReference new_Post = databaseReference.push();
+        new_Post.child("TituloPost").setValue(title);
+        new_Post.child("DescripcionPost").setValue(desc);
+        new_Post.child("ImagenPost").setValue(downloadUri);
+        Intent Intent= new Intent(PostActivity.this, PrincipalActivity.class);
+        Intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(Intent);
+    }
 
-                    String downloadUri = taskSnapshot.getDownloadUrl().toString();
-                    DatabaseReference new_Post = databaseReference.push();
-                    String user_id = firebaseAuth.getCurrentUser().getUid();
+    @Override
+    public void onCancelled(DatabaseError databaseError) {
 
-                    new_Post.child(user_id).child("TituloPost").setValue(title);
-                    new_Post.child(user_id).child("DescripcionPost").setValue(desc);
-                    new_Post.child(user_id).child("ImagenPost").setValue(downloadUri);
-
-                    Intent Intent= new Intent(PostActivity.this, MainActivity.class);
-                    Intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(Intent);
-                    finish();
-
-
+    }
+});
 
                 }
             });
         }else
-            Toast.makeText(PostActivity.this,"cehcar texto",Toast.LENGTH_SHORT).show();
+            Toast.makeText(PostActivity.this, "cehcar texto", Toast.LENGTH_SHORT).show();
 
 
 

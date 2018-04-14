@@ -3,7 +3,7 @@ package com.example.roberto.reveles;
 public class uppostimages {
 
 
-    String title,desc,image;
+    public String title,desc,image;
     private uppostimages(){
 
     }

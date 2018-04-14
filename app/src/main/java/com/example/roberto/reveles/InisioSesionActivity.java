@@ -159,7 +159,7 @@ public class InisioSesionActivity extends AppCompatActivity implements GoogleApi
     }
 
     public void entrarMain() {
-        Intent entrar = new Intent(InisioSesionActivity.this, MainActivity.class);
+        Intent entrar = new Intent(InisioSesionActivity.this, PrincipalActivity.class);
         startActivity(entrar);
         finish();
     }
