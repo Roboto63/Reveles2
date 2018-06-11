@@ -154,6 +154,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         Intent intent7 = new Intent(MainActivity.this, MunicipioActivity.class);
         startActivity(intent7);
     }
+    public void post(View view) {
+        Intent intent7 = new Intent(MainActivity.this, PostActivity.class);
+        startActivity(intent7);
+    }
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {

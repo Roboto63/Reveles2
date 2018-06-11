@@ -108,5 +108,6 @@
     <string name="title_activity_perfil_publico">PerfilPublicoActivity</string>
     <string name="title_activity_grid">GridActivity</string>
     <string name="title_activity_municipio">MunicipioActivity</string>
+    <string name="title_activity_main_two">MainTwo</string>
 
 </resources>

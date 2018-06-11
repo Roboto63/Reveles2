@@ -32,13 +32,7 @@
             android:name=".Perfil"
             android:label="@string/title_activity_perfil"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".WelcomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".WelcomeActivity"></activity>
         <activity android:name=".InisioSesionActivity" />
         <activity android:name=".PopActivity" />
         <activity
@@ -70,7 +64,20 @@
             android:label="@string/title_activity_municipio"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".PostActivity" />
-        <activity android:name=".PrincipalActivity"></activity>
+        <activity android:name=".PrincipalActivity">
+
+        </activity>
+        <activity
+            android:name=".MainTwo"
+            android:label="@string/title_activity_main_two"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

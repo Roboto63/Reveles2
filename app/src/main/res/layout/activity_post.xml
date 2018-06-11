@@ -10,19 +10,12 @@
         android:id="@+id/ivpost"
         android:layout_width="400dp"
         android:layout_height="138dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        app:srcCompat="@android:drawable/ic_menu_report_image"
-        tools:layout_editor_absoluteX="-15dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:srcCompat="@android:drawable/ic_menu_report_image" />
 
     <EditText
         android:id="@+id/edititle"
         android:layout_width="match_parent"
         android:layout_height="41dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="172dp"
         android:background="@drawable/post_edittext"
         android:ems="10"
         android:hint="Titulo"
@@ -31,10 +24,8 @@
     <EditText
         android:id="@+id/edipost"
         android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="248dp"
+        android:layout_height="92dp"
+        android:layout_alignStart="@+id/edititle"
         android:background="@drawable/post_edittext"
         android:ems="10"
         android:hint="Experiencia"
@@ -44,9 +35,8 @@
         android:id="@+id/bttpost"
         android:layout_width="228dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="104dp"
+        android:layout_centerInParent="true"
         android:background="@color/BotonPost"
+        android:gravity="center"
         android:text="Button" />
 </RelativeLayout>
