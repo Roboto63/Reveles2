@@ -33,7 +33,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@mipmap/emo1"
-                        android:onClick="Desplegar" />
+                        android:onClick="Desplegar2" />
 
                     <TextView
                         android:id="@+id/tv_text"

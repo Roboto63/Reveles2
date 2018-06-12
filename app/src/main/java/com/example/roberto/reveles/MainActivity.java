@@ -145,6 +145,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         startActivity(intent4);
     }
 
+    public void Desplegar2(View view) {
+        Intent intent9 = new Intent(MainActivity.this, LugarActivity2.class);
+        startActivity(intent9);
+    }
+
     public void mapa(View view) {
         Intent intent6 = new Intent(MainActivity.this, MapsActivity.class);
         startActivity(intent6);
