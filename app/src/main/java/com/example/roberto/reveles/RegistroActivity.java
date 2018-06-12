@@ -61,7 +61,7 @@ public class RegistroActivity extends AppCompatActivity {
         RegPasswordText = (EditText) findViewById(R.id.edtContrasenaR);
         RegNameText = (EditText) findViewById(R.id.edtNombreR);
         RegistroBtn = (Button) findViewById(R.id.btnRegistroR);
-        ibRegister = (ImageButton) findViewById(R.id.iBtnRegistro);
+        ibRegister = (ImageButton) findViewById(R.id.iregister);
 
         RegistroBtn.setOnClickListener(new View.OnClickListener() {
             @Override
