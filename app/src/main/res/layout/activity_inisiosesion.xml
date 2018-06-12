@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/blanco"
     android:orientation="vertical"
     android:theme="@style/AppTheme.NoActionBar"
@@ -14,7 +15,7 @@
         android:layout_height="wrap_content"
         android:background="@color/Morado"
         android:orientation="vertical"
-        android:padding="30dp">
+        android:padding="10dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -45,17 +46,10 @@
                 android:background="@drawable/buttonstyle4"
                 android:onClick="mapa"
                 android:padding="15dp"
-                android:text="Lee mas"
+                android:text="Lee más"
                 android:textColor="@color/blanco" />
 
-            <Button
-                android:id="@+id/btnRegistro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="18dp"
-                android:background="@drawable/buttonstyle3"
-                android:padding="15dp"
-                android:text="Registrate" />
+
         </LinearLayout>
 
     </LinearLayout>
@@ -66,87 +60,101 @@
         android:layout_gravity="center"
         android:orientation="vertical">
 
-        <EditText
+        <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
             android:id="@+id/edtEmail"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:hint="CORREO"
-            android:inputType="textPersonName"
-            android:textColor="@color/cardview_dark_background"
-            android:textColorHighlight="@color/cardview_dark_background"
-            android:textColorHint="@color/cardview_dark_background" />
+            android:layout_margin="10dp"
+            android:background="@mipmap/fondotexto"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textSize="15sp"
+            app:met_baseColor="@android:color/black"
+            app:met_clearButton="true"
+            app:met_floatingLabel="highlight"
+            app:met_primaryColor="@android:color/black" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:orientation="horizontal">
 
-            <EditText
+            <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
                 android:id="@+id/edtPassword"
-                android:layout_width="302dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:hint="PASSWORD"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="10dp"
+                android:layout_toLeftOf="@+id/cbMostrar3"
+                android:background="@mipmap/fondotexto"
+                android:hint="Contraseña"
                 android:inputType="textPassword"
-                android:textColor="@color/cardview_dark_background"
-                android:textColorHighlight="@color/cardview_dark_background"
-                android:textColorHint="@color/cardview_dark_background" />
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textSize="15sp"
+                app:met_baseColor="@android:color/black"
+                app:met_clearButton="true"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@android:color/black" />
 
-            <Button
-                android:id="@+id/ojito"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="end"
-                android:background="@drawable/ic_remove_red_eye_black_24dp" />
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/buttonstyle"
-            android:text="ENTER" />
+            <com.rey.material.widget.CheckBox
+                android:id="@+id/cbMostrar3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:text="Mostrar"
+                android:textColor="@android:color/black"
+                app:cbd_strokeColor="@android:color/black"
+                app:cbd_tickColor="@color/colorPrimaryDark" />
+        </RelativeLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
             <Button
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:id="@+id/btnLogin"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:layout_margin="10dp"
-                android:background="@mipmap/face" />
+                android:layout_weight="1"
+                android:background="@drawable/buttonstyle"
+                android:text="ENTRAR"
+                android:textColor="@color/blanco" />
 
             <com.google.android.gms.common.SignInButton
                 android:id="@+id/googleSignin"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:padding="5dp" />
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:padding="5dp">
+
+            </com.google.android.gms.common.SignInButton>
         </LinearLayout>
 
-        <LinearLayout
+        <Button
+            android:id="@+id/btnRegistro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:background="@color/cardview_shadow_end_color"
-                android:onClick="recuperar"
-                android:text="Has olvidado la contraseña?"
-                android:textColor="@color/colorPrimary" />
-        </LinearLayout>
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonstyle4"
+            android:text="REGISTRATE"
+            android:textColor="@color/blanco" />
 
     </LinearLayout>
 

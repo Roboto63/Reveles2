@@ -92,10 +92,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         for (int i = 0; i < latLngs.size(); i++) {
             markers.add(mMap.addMarker(new MarkerOptions()
-                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
                     .title(titulos[i])
                     .position(latLngs.get(i))));
         }
+
+        markers.add(mMap.addMarker(new MarkerOptions()
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+                .title(titulos[4])
+                .position(latLngs.get(4))));
+
+        markers.add(mMap.addMarker(new MarkerOptions()
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+                .title(titulos[6])
+                .position(latLngs.get(6))));
         /*mMap.addPolyline(new PolylineOptions().add(
            finca,
            new LatLng(19.390052, -96.979869),
@@ -121,30 +131,30 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     if (marker.equals(markers.get(i))) {
                         Toast.makeText(
                                 MapsActivity.this,
-                                "Marcador pulsado:\n" +
+                                "Lugar:\n" +
                                         marker.getTitle(),
                                 Toast.LENGTH_SHORT).show();
-                        placeInfo();
+                        //placeInfo();
                     }
                 }
 
-                /*if (marker.equals(originMarkers.get(0))) {
+                if (marker.equals(markers.get(6))) {
                     Toast.makeText(
                             MapsActivity.this,
-                            "Marcador pulsado:\n" +
+                            "Lugar:\n" +
                                     marker.getTitle(),
                             Toast.LENGTH_SHORT).show();
                     placeInfo();
                 }
 
-                if (marker.equals(destinationMarkers.get(0))) {
+                if (marker.equals(markers.get(4))) {
                     Toast.makeText(
                             MapsActivity.this,
-                            "Marcador pulsado:\n" +
+                            "Lugar:\n" +
                                     marker.getTitle(),
                             Toast.LENGTH_SHORT).show();
-                    placeInfo();
-                }*/
+                    placeInfo2();
+                }
 
                 return true;
             }
@@ -218,6 +228,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     public void placeInfo() {
         Intent i = new Intent(MapsActivity.this, LugarActivity.class);
+        startActivity(i);
+        finish();
+    }
+
+    public void placeInfo2() {
+        Intent i = new Intent(MapsActivity.this, LugarActivity2.class);
         startActivity(i);
         finish();
     }

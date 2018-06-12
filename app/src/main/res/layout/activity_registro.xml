@@ -1,80 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/loguinopciondos"
-    tools:context="com.example.roberto.reveles.RegistroActivity"
-    tools:layout_editor_absoluteY="81dp">
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.example.roberto.reveles.RegistroActivity">
 
-    <EditText
-        android:id="@+id/edtNombreR"
-        android:layout_width="296dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="244dp"
-        android:background="@mipmap/fondotexto"
-        android:ems="10"
-        android:hint="Nombre Usuario"
-        android:inputType="textPersonName"
-        android:textColorHint="@color/common_google_signin_btn_text_dark_pressed"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/edtCorreoR"
-        android:layout_width="296dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="316dp"
-        android:background="@mipmap/fondotexto"
-        android:ems="10"
-        android:hint="Correo"
-        android:inputType="textEmailAddress"
-        android:textColorHint="@color/common_google_signin_btn_text_dark_pressed"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/edtContrasenaR"
-        android:layout_width="296dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="36dp"
-        android:background="@mipmap/fondotexto"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:textColorHint="@color/common_google_signin_btn_text_dark_pressed"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="@+id/edtCorreoR"
-        app:layout_constraintTop_toBottomOf="@+id/edtCorreoR" />
+            <ImageButton
+                android:id="@+id/ibtnImagenR"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:contentDescription="TODO"
+                android:scaleType="centerCrop"
+                app:srcCompat="@android:drawable/ic_menu_report_image" />
 
-    <Button
-        android:id="@+id/btnRegistroR"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="51dp"
-        android:text="Registrar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtContrasenaR" />
+            <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
+                android:id="@+id/edtNombreR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@mipmap/fondotexto"
+                android:hint="Nombre Usuario"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="25sp"
+                app:met_baseColor="@android:color/white"
+                app:met_clearButton="true"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@android:color/white" />
 
-    <ImageButton
-        android:id="@+id/iregister"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="48dp"
-        android:layout_marginEnd="133dp"
-        android:layout_marginStart="151dp"
-        android:layout_marginTop="96dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/edtNombreR"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_report_image" />
+            <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
+                android:id="@+id/edtCorreoR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@mipmap/fondotexto"
+                android:hint="Correo"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="25sp"
+                app:met_baseColor="@android:color/white"
+                app:met_clearButton="true"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@android:color/white" />
 
-</android.support.constraint.ConstraintLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
+                    android:id="@+id/edtContrasenaR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="10dp"
+                    android:layout_toLeftOf="@+id/cbMostrar"
+                    android:background="@mipmap/fondotexto"
+                    android:hint="Contraseña"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="25sp"
+                    app:met_baseColor="@android:color/white"
+                    app:met_clearButton="true"
+                    app:met_floatingLabel="highlight"
+                    app:met_primaryColor="@android:color/white" />
+
+                <com.rey.material.widget.CheckBox
+                    android:id="@+id/cbMostrar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Mostrar"
+                    android:textColor="@color/blanco"
+                    app:cbd_strokeColor="@android:color/white"
+                    app:cbd_tickColor="@color/colorPrimaryDark" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
+                    android:id="@+id/edtConfContrasenaR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="10dp"
+                    android:layout_toLeftOf="@+id/cbMostrar2"
+                    android:background="@mipmap/fondotexto"
+                    android:hint="Confirmar Contraseña"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="25sp"
+                    app:met_baseColor="@android:color/white"
+                    app:met_clearButton="true"
+                    app:met_floatingLabel="highlight"
+                    app:met_primaryColor="@android:color/white" />
+
+                <com.rey.material.widget.CheckBox
+                    android:id="@+id/cbMostrar2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Mostrar"
+                    android:textColor="@color/blanco"
+                    app:cbd_strokeColor="@android:color/white"
+                    app:cbd_tickColor="@color/colorPrimaryDark" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnRegistroR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Registrar"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtContrasenaR" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

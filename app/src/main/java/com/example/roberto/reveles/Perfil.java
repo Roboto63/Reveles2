@@ -87,11 +87,11 @@ public class Perfil extends AppCompatActivity {
            @Override
            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                if (firebaseAuth.getCurrentUser() != null) {
-                   iDatabase = FirebaseDatabase.getInstance().getReference().child("Usuarios");
+                   iDatabase = FirebaseDatabase.getInstance().getReference().child("usuario");
                    iDatabase.child(firebaseAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
                    @Override
                    public void onDataChange(DataSnapshot dataSnapshot) {
-                       textName.setText(dataSnapshot.child("NombreUsuario").getValue().toString());
+                       textName.setText(dataSnapshot.child("nombre").getValue().toString());
                    }
 
                    @Override

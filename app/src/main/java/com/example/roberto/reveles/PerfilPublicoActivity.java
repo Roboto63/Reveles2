@@ -6,7 +6,6 @@ import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -31,7 +30,7 @@ public class PerfilPublicoActivity extends AppCompatActivity {
 
         //Obtener la informacion del usuario
         String user_id = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        DatabaseReference dbperfil = FirebaseDatabase.getInstance().getReference().child("Usuarios");
+        DatabaseReference dbperfil = FirebaseDatabase.getInstance().getReference().child("usuario");
         DatabaseReference currentUserDB = dbperfil.child(user_id);
 
         txtNombre = (TextView) findViewById(R.id.txtPerfilNom);
@@ -39,7 +38,7 @@ public class PerfilPublicoActivity extends AppCompatActivity {
         currentUserDB.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String poner_nombre = dataSnapshot.child("NombreUsuario").getValue().toString();
+                String poner_nombre = dataSnapshot.child("nombre").getValue().toString();
 
                 txtNombre.setText(poner_nombre);
             }
